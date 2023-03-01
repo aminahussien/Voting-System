@@ -1,5 +1,7 @@
 const Candidate = require ('../models/candidatesModel')
+
 const mongoose = require('mongoose')
+
 
 // get all candidates
 const getCandidates = async (req, res) => {
