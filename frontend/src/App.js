@@ -21,6 +21,10 @@ function App() {
           path="/login"
           element={!admin ? <Login/>: <Navigate to = "/"/>}
           />
+        <Route 
+          path="/voters"
+          element={admin ? <Login/>: <Navigate to = "/voters"/>}
+          />
         </Routes>
       </div>
       </BrowserRouter>

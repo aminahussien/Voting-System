@@ -1,14 +1,21 @@
 import { Link } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
+import { useVotersContext } from '../hooks/useVotersContext'
 
 const Navbar = () => {
 
     const { logout }= useLogout()
-    const { admin } = useAuthContext()
+    const { admin } = useAuthContext() 
+    const { voters } = useVotersContext()
 
     const handleClick = ()=>{
         logout()
+    }
+
+    const handleClick2 =()=>{
+        voters()
+
     }
 return (
     <header>
@@ -26,6 +33,9 @@ return (
                 <Link to="/login">Login</Link>
             </div>
             )}
+            {admin && (<div>
+                <button onClick= {handleClick2}>Voters</button>
+            </div>)}
         </nav>
     </div>
     </header>

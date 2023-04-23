@@ -8,6 +8,9 @@ const csvSchema = new Schema({
     },
     nid:{
         type:String
+    },
+    phNum:{
+        type:String
     }
     
     });
